@@ -1,0 +1,148 @@
+.contact-big-container {
+
+  width: 100vw;
+  /* height: 100vh; */
+  background: rgb(148, 0, 123);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    0deg,
+    rgba(148, 0, 123, 1) 0%,
+    rgba(0, 0, 0, 1) 50%
+  );
+}
+
+.contact-h1-container {
+  width: 60%;
+  text-align: left;
+}
+
+.contact-h1-container h1 {
+    animation-delay: 800ms;
+      animation-name: container-in-bottom;
+      animation-timeline: scroll(root block);
+      animation-fill-mode: both;
+      animation-duration: 500ms;
+  margin-left: 20px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  cursor: default;
+  font-size: 100px;
+  font-family: "OffBit Trial", sans-serif;
+  font-weight: 100;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: rgba(250, 235, 215, 0);
+  background-clip: text;
+  background-position: center top 30%;
+  background-image: url("../assets/starfall-bg.gif");
+}
+.contact-icon-container {
+  animation-delay: 800ms;
+      animation-name: container-in-bottom;
+        animation-timeline: scroll(root block);
+        animation-fill-mode: both;
+        animation-duration: 500ms;
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+.contact-icon-container p {
+  position: relative;
+  left: 5%;
+
+  transition: all 0.3s ease-in;
+  /* opacity: 0; */
+  font-size: 24px;
+}
+.contact-icon-container a {
+  color: white;
+  font-family: monospace;
+  /* width: 300px; */
+  height: auto;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.contact-icon-container a:hover p {
+  opacity: 1;
+}
+.contact-icon-container a:hover svg {
+  transform: scale(1.1);
+  filter: brightness(2);
+}
+.icon-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.contact-icon-container svg {
+  filter: drop-shadow(0px 0px 5px black);
+  /* margin-right: 5%; */
+  /* margin-bottom: 15%; */
+}
+
+.contact-svg-container {
+  /* width: 100vw; */
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-svg-container svg {
+  /* padding-top: 200%; */
+  transform: rotate(180deg);
+  filter: invert(1) brightness(2);
+  width: 50px;
+  height: 50px;
+}
+
+
+@keyframes container-in-bottom {
+  0% {
+    transform: translateY(100px) scaleY(1.5) scaleX(0.2);
+    transform-origin: 50% 100%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .contact-icon-container a {
+    color: white;
+    font-family: monospace;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .contact-svg-container svg {
+    display: none;
+  }
+  .contact-icon-container p {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    transition: all 0.3s ease-in;
+    /* opacity: 0; */
+    font-size: 14px;
+  }
+  .contact-h1-container h1 {
+    margin-left: 20px;
+    
+  }
+  .contact-h1-container{
+    width: 100%;
+  }
+}

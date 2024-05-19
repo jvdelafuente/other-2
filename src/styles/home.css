@@ -1,0 +1,191 @@
+@import url("https://fonts.cdnfonts.com/css/offbit-trial");
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  /* height: 100vh; */
+  background: rgb(148, 0, 123);
+  background: linear-gradient(
+    0deg,
+    rgba(148, 0, 123, 1) 0%,
+    rgba(66, 1, 78, 1) 20%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.home-h1-container {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.home-container h1 {
+  text-align: end;
+  margin: 0;
+}
+.home-name {
+  animation-name: slide-out-left;
+  animation-timeline: scroll(root block);
+  animation-fill-mode: both;
+  animation-duration: 500ms;
+  cursor: default;
+  font-size: clamp(40px, 10vw, 150px);
+  font-family: "OffBit Trial", sans-serif;
+  font-weight: 100;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: rgba(250, 235, 215, 0);
+  background-clip: text;
+  background-position: unset;
+  background-image: url("../assets/starfall-bg.gif");
+}
+.home-img-container {
+  animation-name: slide-out-top;
+        animation-timeline: scroll(root block);
+        animation-fill-mode: both;
+        animation-duration: 500ms;
+  margin: 5%;
+  font-size: 50px;
+  color: white;
+  font-family: "OffBit Trial", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-avatar {
+  animation-name: slide-out-top;
+  animation-timeline: scroll(root block);
+  animation-fill-mode: both;
+  animation-duration: 500ms;
+  background-image: url("../assets/frame.png");
+  background-position: center;
+  background-size: cover;
+  width: 15%;
+  /* height:50%; */
+}
+.home-h2-container {
+  display: flex;
+}
+.home-img-container h2 {
+  animation-name: slide-out-right;
+  animation-timeline: scroll(root block);
+  animation-fill-mode: both;
+  animation-duration: 500ms;
+  margin: 0;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: rgba(250, 235, 215, 0);
+
+  background-clip: text;
+  background-position: bottom left 55%;
+  background-image: url("../assets/starfall-bg.gif");
+  font-weight: 100;
+  font-size: clamp(30px, 6vw, 100px);
+}
+
+.home-p-container {
+  animation-delay: 10ms;
+  animation-name: slide-out-top;
+  animation-timeline: scroll(root block);
+  animation-fill-mode: both;
+  animation-duration: 500ms;
+  cursor: default;
+  border-top: 5px groove rgb(148, 0, 123);
+  border-bottom: 5px groove rgb(148, 0, 123);
+  /* margin-top: 5%; */
+  color: #fff;
+  font-family: monospace;
+  font-size: 14px;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+}
+.home-p-container p {
+  width: 60vw;
+}
+.home-svg-container svg {
+  filter: invert(1) brightness(2);
+  width: 50px;
+}
+.home-svg-container {
+  animation-name: slide-out-bot;
+  animation-timeline: scroll(root block);
+  animation-fill-mode: both;
+  animation-duration: 500ms;
+}
+
+@keyframes slide-out-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-bot {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 740px) {
+  .home-container h1 {
+    font-size: 55px;
+    text-align: start;
+    margin: 0;
+  }
+
+  .home-img-container {
+    flex-direction: column;
+    text-align: start;
+    height: 55vh;
+  }
+  .home-img-container h2 {
+    text-align: start;
+    font-size: 70px;
+  }
+  .home-avatar {
+    margin-bottom: 10px;
+    width: 20%;
+  }
+  .home-p-container {
+    width: 100%;
+  }
+  .home-p-container p {
+    width: 90%;
+  }
+}

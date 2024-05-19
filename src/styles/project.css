@@ -1,0 +1,136 @@
+.project-big-container{
+  padding-top: 20%;
+  width: 100vw;
+  background-color: black;
+}
+.project-h1-container{
+  width: 60%;
+  height: 20vh;
+  text-align: center;
+}
+.project-h1-container h1{
+    animation-delay: 400ms;
+      animation-name: roll-in-blurred-bottom;
+      animation-timeline: scroll(root block);
+      animation-fill-mode: both;
+      animation-duration: 500ms;
+  padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 0;
+  margin-left: 60px;
+      cursor: default;
+      font-size: 100px;
+      font-family: 'OffBit Trial', sans-serif;
+      font-weight: 100;
+      -webkit-text-stroke: 1px rgb(255, 255, 255);
+      color: rgba(250, 235, 215, 0);
+      background-clip: text;
+      background-position: bottom 10%;
+      background-image: url('../assets/starfall-bg.gif');
+}
+
+.project-project-container{
+  margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr)) ;     
+grid-gap: 4%;
+}
+.grid-item {
+  animation-delay: 500ms;
+    animation-name: roll-in-blurred-bottom;
+      animation-timeline: scroll(root block);
+      animation-fill-mode: both;
+      animation-duration: 500ms;
+  cursor: pointer;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: monospace;
+  font-size: 18px;
+  color: white;
+  margin-top: 1%;
+  height: 23vh;
+  width: 90%;
+  background-color: #42014e;
+  padding: 20px;
+  text-align: start;
+  transition: all 0.3s ease-in-out;
+}
+.grid-item h2{
+  margin: 0;
+}
+
+.grid-item:hover {
+  transform: scale(1.02);
+  background-image: url('../assets/project.png');
+  background-position: center;
+  background-size: cover;
+  color: rgba(255, 255, 255, 0.404);
+  text-shadow: 11px 11px 1px rgba(0, 0, 0, 0.301);
+}
+.grid-item:hover h3{
+  border: none;
+}
+.project-p-container{
+  margin-left: 5%;
+  width: 80%;
+  font-size: 14px;
+}
+
+
+.project-tool-container{
+  display: flex;
+  font-size: 14px;
+    text-overflow: clip
+}
+
+.project-tool-container h3{
+  margin-left: 5%;
+  border: 2px solid white;
+  padding: 1%;
+}
+
+.project-svg-container {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.project-svg-container svg {
+  padding-top: 80%;
+  filter: invert(1) brightness(2);
+  width: 50px;
+  height: 50px;
+}
+
+
+@keyframes roll-in-blurred-bottom {
+  0% {
+    transform: translateY(600px) rotate(720deg) scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  70%{
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+  }
+    90% {
+      transform:  rotate(720deg);
+      opacity: 0;
+    }
+    100%{
+      opacity: 0;
+    }
+}
+@media (max-width: 1060px){
+  .project-project-container{
+    grid-template-columns: repeat(auto-fit, minmax(75vw, 1fr));
+  }
+}
