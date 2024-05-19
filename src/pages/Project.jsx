@@ -1,5 +1,4 @@
 import "../styles/project.css";
-import Atropos from "atropos/react";
 
 export default function Project() {
   return (
@@ -34,10 +33,9 @@ export default function Project() {
             <h3>Tailwind</h3>
           </div>
         </div></div>
-        <Atropos
+        <div
         className="card-atropos"
-        activeOffset={40}
-        shadowScale={1.05}>
+>
         <div data-atropos-offset="3" className="grid-item">
           <h2>Project 3</h2>
           <div className="project-p-container">
@@ -48,11 +46,9 @@ export default function Project() {
           <h3>SASS</h3>
           <h3>Tailwind</h3>
           </div>
-        </div></Atropos>
-        <Atropos
-        className="card-atropos"
-        activeOffset={40}
-        shadowScale={1.05}>
+        </div></div>
+        <div
+        className="card-atropos">
         <div data-atropos-offset="3" className="grid-item">
           <h2>Project 4</h2>
           <div className="project-p-container">
@@ -63,7 +59,7 @@ export default function Project() {
             <h3>SASS</h3>
             <h3>Tailwind</h3>
           </div>
-        </div></Atropos>
+        </div></div>
       </div>
     </div>
   );
