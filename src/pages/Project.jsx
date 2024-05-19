@@ -8,10 +8,8 @@ export default function Project() {
         <h1>Projects</h1>
       </div>
       <div className="project-project-container">
-        <Atropos
-        className="card-atropos"
-        activeOffset={40}
-        shadowScale={1.05}>
+        <div
+        className="card-atropos">
         <div data-atropos-offset="3" className="grid-item">
           <h2>Project 1</h2>
           <div className="project-p-container">
@@ -22,11 +20,9 @@ export default function Project() {
             <h3>SASS</h3>
             <h3>Tailwind</h3>
           </div>
-        </div></Atropos>
-        <Atropos
-        className="card-atropos"
-        activeOffset={40}
-        shadowScale={1.05}>
+        </div></div>
+        <div
+        className="card-atropos">
         <div data-atropos-offset="3" className="grid-item">
           <h2>Project 2</h2>
           <div className="project-p-container">
@@ -37,7 +33,7 @@ export default function Project() {
             <h3>SASS</h3>
             <h3>Tailwind</h3>
           </div>
-        </div></Atropos>
+        </div></div>
         <Atropos
         className="card-atropos"
         activeOffset={40}
